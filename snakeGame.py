@@ -2,7 +2,7 @@
 import pygame, sys, random, time
 #Check for initializing errors
 check_errors = pygame.init()
-if check_errors[1] > 0
+if check_errors[1] > 0:
 	print("(!)Had {0} initializing errors, exiting...".format(check_errors[1]))
 	sys.exit(-1)
 else:
@@ -92,13 +92,13 @@ while True:
 	if direction == 'LEFT':
 		snakePos[0] -= 10
 	if direction == 'UP':
-		snakePos[0] -=1 0
+		snakePos[0] -=10
 	if direction == 'DOWN':
 		snakePos[0] += 10
 	
 	#Snake body mechanism
 	snakeBody.insert(0, list(snakePos))
-	if snakePos[0] == foodPos[0] and snakePos[1] == foodPos[1]
+	if snakePos[0] == foodPos[0] and snakePos[1] == foodPos[1]:
 		score += 1
 		foodSpawn = False
 	else:
@@ -118,7 +118,7 @@ while True:
 		pygame.Rect(pos[0], pos[1], 10, 10))
 
 	pygame.draw.rect(playSurface, brown, 
-	pygame.Rect(foodPos[0], foodPos[1] 10, 10))
+	pygame.Rect(foodPos[0], foodPos[1], 10, 10))
 	
 	#Bound
 	if snakePos[0] > 720 or snakePos[0] < 0:
